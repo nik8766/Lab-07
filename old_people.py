@@ -59,6 +59,7 @@ def print_name_and_age(old_people_list):
     # Hint: Use a for loop to iterate the list of tuples to print a sentence for each old person
     return
 
+
 def save_name_and_age_to_csv(name_and_age_list, csv_path):
     """Saves name and age of all people in provided list
 

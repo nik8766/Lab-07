@@ -72,27 +72,26 @@ def populate_people_table():
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
 """
     # Hint: See example code in lab instructions entitled "Working with Faker"
-    fake = Faker()
+    data = Faker()
     
     for _ in range(200):
      fake_people = (
 
-        fake.name(),
-        fake.email(),
-        fake.address(),
-        fake.city(),
-        fake.state(),
-        fake.text(),
-        fake.random_int(min=1, max=100),
+        data.name(),
+        data.email(),
+        data.address(),
+        data.city(),
+        data.state(),
+        data.text(),
+        data.random_int(min=1, max=100),
         datetime.now(),
         datetime.now())
      
      cur.execute(add_person_query, fake_people)
-     con.commit()
+     con.commit() 
      con.close()
 
     return
 
 if __name__ == '__main__':
    main()
-   
